@@ -1,3 +1,20 @@
+"""
+Work with Claude Code (CC) to complete this prefect flow.
+
+The best way to do this is to open CC in the root dir of this
+project, and your prompt can reference @05_prefect/07_github_api_pagination.py
+to ask for a plan for how to complete the steps. the instructors
+inline comments already add to the prompt - i.e. to paginate over that
+API endpoint for a certain number of pages, and to store the output
+in a single duckdb table. Ask CC to enumerate the steps you will need
+to do this, and REQUIRE it to work with you on each task, one by one.
+
+Read what CC generates/suggests with each step, and ask yourself if you
+understand the python it has generated.
+
+
+"""
+
 import json
 import os
 from datetime import datetime, timezone
@@ -9,17 +26,17 @@ from prefect.logging import get_run_logger
 from prefect.task_runners import ThreadPoolTaskRunner
 
 
-# public github activity for scott chacon
+# commit history for the git/git repository
 TOKEN = os.environ["GH_PAT"]
 HEADERS = {"Authorization": f"Bearer {TOKEN}"}
-URL = "https://api.github.com/users/schacon/events/public"
+URL = "https://api.github.com/repos/git/git/commits"
 PER_PAGE = 100
 PAGES = 10
 
 
 # ------ only one task ------
 # create a single prefect task that loops through 10 pages
-# of github activity and stores each one into a duckdb table.
+# of git/git commits and stores each one into a duckdb table.
 # add more tasks and more data if you like, and do more with it.
 # if successful you should have 1000 records in your db.
 
