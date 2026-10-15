@@ -10,9 +10,12 @@ in a single duckdb table. Ask CC to enumerate the steps you will need
 to do this, and REQUIRE it to work with you on each task, one by one.
 
 Read what CC generates/suggests with each step, and ask yourself if you
-understand the python it has generated.
-
-
+understand the python it has generated. IF YOU DO NOT UNDERSTAND IT WELL,
+this is your chance to learn a bit more python! Ask CC to explain the specific
+lines that are unclear to you, and have a back and forth with CC until you
+get a sense for what is going on. You know about loops, and you know about
+fetching remote web content, and so the growth here is understanding how
+to cycle through a series of related links to build up all 1000 records.
 """
 
 import json
