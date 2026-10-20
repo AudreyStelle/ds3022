@@ -5,6 +5,8 @@ and denial of service attacks by flooding requests.
 Unauthenticated users have a limit of 60 requests/hour.
 Authenticated users have a limit of 5000 requests/hour.
 
+https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2026-03-10
+
 The x-ratelimit response headers returned by the GitHub core API:
 
 x-ratelimit-limit: 5000            # max requests per hour
