@@ -13,6 +13,6 @@
 
 - [**Data** | **Types** | **Schemas**](01_data/)
 - [**Queries** | **Columnar**](02_query/)
-- [**Transformation** | **DuckDB** ](03_transform/)
+- [**Transformation** | **DuckDB** | **`dbt`** ](03_transform/)
 - [**Ingest** | **APIs** | **Exceptions** | **Logging** | **Pagination** | **Rate Limits**](04_apis/)
 - [**Prefect Workflow Orchestration**](05_prefect)
